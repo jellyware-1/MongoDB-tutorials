@@ -33,12 +33,25 @@ const createAndSavePerson = (done) => {
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
-  let people = Person.create(arrayOfPeople);
+  arrayOfPeople = [
+    {
+      name: "test",
+      age: 10,
+      favoriteFoods: ["test1", "test2"],
+    },
+    {
+      name: "test",
+      age: 10,
+      favoriteFoods: ["test1", "test2"],
+    },
+    {
+      name: "test",
+      age: 10,
+      favoriteFoods: ["test1", "test2"],
+    }
+  ];
 
-  people.save((err, data) => {
-    if (err) return console.error(err);
-    done(null, data);
-  });
+  let people = Person.create(arrayOfPeople);
 };
 
 const findPeopleByName = (personName, done) => {
@@ -80,6 +93,24 @@ const queryChain = (done) => {
 
   done(null /*, data*/);
 };
+
+createManyPeople([
+  {
+    name: "test",
+    age: 10,
+    favoriteFoods: ["test1", "test2"],
+  },
+  {
+    name: "test",
+    age: 10,
+    favoriteFoods: ["test1", "test2"],
+  },
+  {
+    name: "test",
+    age: 10,
+    favoriteFoods: ["test1", "test2"],
+  }
+])
 
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
