@@ -95,24 +95,6 @@ const queryChain = (done) => {
   done(null /*, data*/);
 };
 
-createManyPeople([
-  {
-    name: "test",
-    age: 10,
-    favoriteFoods: ["test1", "test2"],
-  },
-  {
-    name: "test",
-    age: 10,
-    favoriteFoods: ["test1", "test2"],
-  },
-  {
-    name: "test",
-    age: 10,
-    favoriteFoods: ["test1", "test2"],
-  }
-])
-
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
  */
