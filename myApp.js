@@ -1,7 +1,5 @@
-const { Mongoose } = require('mongoose');
-
 require('dotenv').config();
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGO_URI, {"useUnifiedTopology": true, "useNewUrlParser": true});
 
@@ -51,9 +49,9 @@ var arrayOfPeople = [
 ];
 
 const createManyPeople = (arrayOfPeople, done) => {
-  Person.create(arrayOfPeople, function(err, data){
+  Person.create(arrayOfPeople, (err, data) => {
     if (err) return console.error(err);
-    done(null, data);
+    //done(null, data);
   });
 };
 
