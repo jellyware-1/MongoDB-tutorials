@@ -40,14 +40,14 @@ const createManyPeople = (arrayOfPeople, done) => {
       favoriteFoods: ["test1", "test2"],
     },
     {
-      name: "test",
-      age: 10,
-      favoriteFoods: ["test1", "test2"],
+      name: "test1",
+      age: 12,
+      favoriteFoods: ["test3", "test4"],
     },
     {
-      name: "test",
-      age: 10,
-      favoriteFoods: ["test1", "test2"],
+      name: "test2",
+      age: 14,
+      favoriteFoods: ["test5", "test6"],
     }
   ];
 
