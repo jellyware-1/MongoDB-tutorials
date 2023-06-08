@@ -64,10 +64,10 @@ const findPeopleByName = (personName, done) => {
   })
 };
 
-var food = {favoriteFoods: ["test1"]};
+var food = ["test1"];
 
 const findOneByFood = (food, done) => {
-  Person.findOne(food, (err, data) => {
+  Person.findOne({favoriteFoods: food}, (err, data) => {
     if (err) return console.error(err);
     done(null , data);
   });
